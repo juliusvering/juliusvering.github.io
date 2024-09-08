@@ -1,0 +1,38 @@
+body {
+  color: #212121;
+  font-family: "Schibsted Grotesk", Lucida Sans, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  max-width: 1080px;
+}
+
+footer {
+  height: 20px;
+}
+
+
+.wrapper {
+  min-height: calc(96vh - 20px);
+}
+
+img.portrait {
+  max-width: min(100% - 20px, 460px);
+}
+
+div.main-text {
+  max-width: min(100% - 20px, 680px);
+
+}
+
+
+.copyright {
+  float: left;
+}
+
+.updated {
+  float: right;
+}
