@@ -1,38 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   color: #212121;
+  background-color: #fafafa;
   font-family: "Schibsted Grotesk", Lucida Sans, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-p {
+header,
+h3 {
+  margin: 1rem 0;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  margin: 0 auto;
   max-width: 1080px;
+  padding: 0 1rem;
 }
 
-footer {
-  height: 20px;
+a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
 
-.wrapper {
-  min-height: calc(96vh - 20px);
+a:focus {
+  outline: 2px dashed #0066cc;
+  outline-offset: 2px;
+}
+
+.main-text {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.main-text p {
+  line-height: 1.5;
+}
+
+.portrait-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 img.portrait {
-  max-width: min(100% - 20px, 460px);
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1 / 1;
+  display: block;
+  margin: 0 auto;
+  height: auto;
 }
 
-div.main-text {
-  max-width: min(100% - 20px, 680px);
-
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-
-.copyright {
-  float: left;
+/* Second page */
+h3 {
+  text-align: center;
+  font-weight: 700;
 }
 
-.updated {
-  float: right;
+.wrapper {
+  flex: 1;
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Table styling for second page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th {
+  background: #f0f0f0;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 2px solid #ccc;
+}
+
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+td:nth-child(3) {
+  text-align: center;
+}
+
+tr:hover td {
+  background: #f9f9f9;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+
+  a {
+    color: #66c0ff;
+  }
+
+  table {
+    background-color: #1e1e1e;
+  }
+
+  th {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+
+  tr:hover td {
+    background-color: #2a2a2a;
+  }
+
+  .main-text p {
+    color: #d0d0d0;
+  }
 }
